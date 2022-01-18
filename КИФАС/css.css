@@ -1,0 +1,248 @@
+*{
+	margin: 0;
+}
+body{
+	width: 1500px;
+	margin:auto;
+}
+.logo{
+	height: 50px;
+	width: 50px;
+	margin:auto;
+}
+.header{
+	height: 60px;
+	width: 1500px;
+	background-color: #fff;
+	display: inline-flex;
+}
+.slider{
+	width: 1000px;
+	border:1px solid black;
+	border-radius: 10px;
+	height: 400px;
+	margin: auto;
+	margin-top: 50px;
+}
+.categoryTable{
+	border-spacing: 89px 20px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.categoryTable tr td{
+	border-radius: 10px;
+	width: 260px;
+	height: 70px;
+	background-color: #f7f6f5;
+	padding-top: -20px;
+}
+.categoryTable tr td:hover{
+	background-color: #ddd;
+}
+.categoryTable tr td img{
+	margin-bottom: -6px;
+	margin-right: 7px;
+}
+.menu{}
+.menuCaption{
+	font-size: 56px;
+	font-weight: 700;
+}
+.menuTable{
+	border-spacing: 20px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.menuTable tr td{
+	border-radius: 10px;
+	width: 460px;
+	height: 300px;
+}
+.menuTable tr td:hover{
+	background-color: #ddd;
+}
+.menuTable tr td div{
+	display: inline-table;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+.menuImg1{
+	background-image: url(img/menu1.webp);
+	width: 330px;
+	height: 237px;
+}
+.menuImg2{
+	background-image: url(img/menu2.webp);
+	width: 261px;
+	height: 84%;
+	background-size: 100%;
+	top:10px;
+	margin-bottom: -10px;
+}
+.menuImg3{
+	background-image: url(img/menu3.webp);
+	width: 261px;
+	height: 84%;
+	background-size: 100%;
+	margin-bottom: -15px;
+}
+.menuImg4{
+	background-image: url(img/menu4.webp);
+	width: 261px;
+	height: 77%;
+	background-size: 100%;
+}
+.menuImg5{
+	background-image: url(img/menu5.webp);
+	width: 261px;
+	height: 77%;
+	background-size: 100%;
+}
+.menuImg6{
+	background-image: url(img/menu6.webp);
+	width: 261px;
+	height: 39%;
+	background-size: 100%;
+    margin-bottom: 60px;
+    margin-top: 52px;
+}
+.contacts{
+	display: inline-flex;
+	font-size: 18px;
+	margin-left: 220px;
+}
+.contacts1,.contacts2{
+	border-spacing: 60px 10px;
+}
+.contacts3{
+}
+.contactsCaption{
+	font-weight: 800;
+	font-size: 28px;
+}
+.footer{
+	background-color: #fff;
+}
+/**
+  * SimpleAdaptiveSlider by Itchief v2.0.0 (https://github.com/itchief/ui-components/tree/master/simple-adaptive-slider)
+  * Copyright 2020 - 2021 Alexander Maltsev
+  * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+  */
+
+/* стили для корневого элемента слайдера */
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* стили для wrapper */
+.slider__wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+/* стили для элемента, в котором непосредственно расположены элементы (слайды) */
+.slider__items {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* класс для отключения transition */
+.transition-none {
+  transition: none;
+}
+
+/* стили для элементов */
+.slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+/* кнопки Prev и Next */
+.slider__control {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 50px;
+  transform: translateY(-50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0.5;
+  user-select: none;
+}
+
+.slider__control_show {
+  display: flex;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.slider__control_prev {
+  left: 0;
+}
+
+.slider__control_next {
+  right: 0;
+}
+
+.slider__control::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.slider__control_prev::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control_next::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+/* Индикаторы */
+.slider__indicators {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 15%;
+  list-style: none;
+  user-select: none;
+}
+
+.slider__indicator {
+  flex: 0 1 auto;
+  width: 30px;
+  height: 4px;
+  margin-right: 3px;
+  margin-left: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  cursor: pointer;
+}
+
+.slider__indicator_active {
+  background-color: #fff;
+}
